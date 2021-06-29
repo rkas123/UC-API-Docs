@@ -1,0 +1,244 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.heading {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  overflow: hidden;
+}
+
+.heading:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #ff0081, #6827b0);
+  transform: scaleX(1.5);
+  border-radius: 0 0 50% 50%/0 0 100% 100%;
+}
+
+.heading .content {
+  position: relative;
+  z-index: 1;
+  margin: 0 auto;
+  max-width: 900px;
+  text-align: center;
+}
+
+.heading .content h1 {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  font-size: 3rem;
+  margin-bottom: 30px;
+}
+
+.heading .content p {
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+/*  */
+.documentation {
+  padding: 100px 0;
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.card {
+  text-align: center;
+  margin: auto;
+  margin-bottom: 100px;
+  width: 80%;
+  /* background-color: #6827b0; */
+  padding: 20px;
+}
+
+.card.Border {
+  border: 2px solid #009879;
+}
+
+.card p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.card .info {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.content-table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  min-width: 400px;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.content-table thead tr {
+  background-color: #009879;
+  color: #fff;
+  text-align: left;
+  font-weight: bold;
+}
+
+.content-table th,
+.content-table td {
+  padding: 12px 15px;
+  text-align: left;
+}
+
+.content-table tbody tr {
+  border-bottom: 1px solid #ddd;
+}
+
+.content-table tbody tr:nth-of-type(even) {
+  background: #f3f3f3;
+}
+
+.content-table tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
+}
+
+.data-format {
+  margin: auto;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.data-format img {
+  height: 400px;
+  margin-bottom: 20px;
+}
+
+.subsection-head {
+  font-size: 2rem;
+}
+
+.section-head {
+  margin: 100px;
+  font-size: 4rem;
+}
+
+.subsection {
+  margin-bottom: 150px;
+}
+
+.midblocks {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+  text-align: center;
+}
+
+.midblocks {
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+.midblocks::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+section {
+  height: 100vh;
+  scroll-snap-align: start;
+}
+.one {
+  background-color: #f9ed69;
+}
+.two {
+  background-color: #f08a5d;
+}
+.three {
+  background-color: #f7dad9;
+  color: #5d534a;
+}
+
+.midblock h1 {
+  font-size: 2rem;
+  padding-top: 20px;
+}
+
+.tryithead {
+  margin-bottom: 50px;
+}
+
+.tryitform {
+  width: 70%;
+  margin: auto;
+}
+
+.form-pair-fields {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#urlpara {
+  margin-top: 20px;
+}
+
+.moreinfohead {
+  padding-top: 20px;
+}
+
+.list {
+  width: 80%;
+  margin: auto;
+  text-align: left;
+  margin-top: 40px;
+  font-size: 1.2rem;
+}
+
+.list li {
+  margin-bottom: 25px;
+  list-style: none;
+}
+
+.sublist li {
+  list-style: square;
+  margin-bottom: 2px;
+}
+
+.sublist li a {
+  text-decoration: none;
+  color: beige;
+}
+
+.aboutmehead {
+  padding-top: 20px;
+  margin-bottom: 20px;
+}
+
+.skill {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #5d534a;
+}
+.skill img {
+  margin: auto;
+  display: block;
+}
+
+.skillcontainer {
+  margin-top: 40px;
+}
+.profiles {
+  text-align: center;
+  margin-top: 50px;
+}
+.profilepic {
+  width: 90%;
+  border-radius: 50%;
+}

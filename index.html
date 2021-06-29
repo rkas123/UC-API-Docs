@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>UC-API Docs</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+      <a href="#" class="navbar-brand">UC Api</a>
+      <button
+        class="navbar-toggler"
+        data-toggle="collapse"
+        data-target="#navbarMenu"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarMenu">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a href="#documentation" class="nav-link">Docs</a>
+          </li>
+          <li class="nav-item">
+            <a href="#tryit" class="nav-link">Try It</a>
+          </li>
+          <li class="nav-item">
+            <a href="#moreinfo" class="nav-link">More Info</a>
+          </li>
+          <li class="nav-item">
+            <a href="#aboutme" class="nav-link">About Me</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <section class="heading" data-aos="zoom-out">
+      <div class="content">
+        <h1>Upcoming Contests API!</h1>
+        <p>
+          Easy to use REST API for fetching upcoming contests. WITHOUT any
+          request throttle.
+        </p>
+        <p>Useful features like server-side pagination and filters.</p>
+      </div>
+    </section>
+
+    <div id="documentation" class="documentation">
+      <h1 class="section-head">Documenation</h1>
+      <div class="container subsection">
+        <h2 class="subsection-head">Data Format</h2>
+        <div class="row data-format">
+          <div class="col col-lg-6 col-sm-12" data-aos="flip-left">
+            <img src="./images/Data.PNG" />
+          </div>
+          <div class="col col-lg-6 col-sm-12" data-aos="flip-right">
+            <img src="./images/JSON.PNG" />
+          </div>
+        </div>
+      </div>
+
+      <h1 class="subsection-head">Filters</h1>
+      <div class="section">
+        <div class="card" data-aos="fade-left">
+          <h1>Platforms</h1>
+          <p>Datatype : Array of Strings</p>
+          <p class="info">
+            This filter will return only the contests of the specified platforms
+          </p>
+          <table class="content-table">
+            <thead>
+              <tr>
+                <th>Platform</th>
+                <th>Code</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Codeforces</td>
+                <td>cf</td>
+              </tr>
+              <tr>
+                <td>Codechef</td>
+                <td>cc</td>
+              </tr>
+              <tr>
+                <td>Topcoder</td>
+                <td>tp</td>
+              </tr>
+              <tr>
+                <td>USACO</td>
+                <td>us</td>
+              </tr>
+              <tr>
+                <td>SPOJ</td>
+                <td>sp</td>
+              </tr>
+              <tr>
+                <td>Facebook</td>
+                <td>fb</td>
+              </tr>
+              <tr>
+                <td>Google</td>
+                <td>go</td>
+              </tr>
+              <tr>
+                <td>Hackerrank</td>
+                <td>hr</td>
+              </tr>
+              <tr>
+                <td>Hackerearth</td>
+                <td>he</td>
+              </tr>
+              <tr>
+                <td>Atcoder</td>
+                <td>at</td>
+              </tr>
+              <tr>
+                <td>LeetCode</td>
+                <td>lc</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="card Border" data-aos="fade-right">
+          <h1>start_gte</h1>
+          <p>Datatype: Number</p>
+          <p>Description: Time in milliseconds</p>
+          <p class="info">
+            This filter will return the contests whose starting time is GREATER
+            THAN EQUAL to the specified time
+          </p>
+        </div>
+        <div class="card Border" data-aos="fade-left">
+          <h1>start_lte</h1>
+          <p>Datatype: Number</p>
+          <p>Description: Time in milliseconds</p>
+          <p class="info">
+            This filter will return the contests whose starting time is LESS
+            THAN EQUAL to the specified time
+          </p>
+        </div>
+        <div class="card Border" data-aos="fade-right">
+          <h1>end_gte</h1>
+          <p>Datatype: Number</p>
+          <p>Description: Time in milliseconds</p>
+          <p class="info">
+            This filter will return the contests whose ending time is GREATER
+            THAN EQUAL to the specified time
+          </p>
+        </div>
+        <div class="card Border" data-aos="fade-left">
+          <h1>end_lte</h1>
+          <p>Datatype: Number</p>
+          <p>Description: Time in milliseconds</p>
+          <p class="info">
+            This filter will return the contests whose ending time is LESS THAN
+            EQUAL to the specified time
+          </p>
+        </div>
+        <div class="card Border" data-aos="fade-right">
+          <h1>duration_gte</h1>
+          <p>Datatype: Number</p>
+          <p>Description: Time in milliseconds</p>
+          <p class="info">
+            This filter will return the contests whose duration is GREATER THAN
+            EQUAL to the specified time
+          </p>
+        </div>
+        <div class="card Border" data-aos="fade-left">
+          <h1>duration_lte</h1>
+          <p>Datatype: Number</p>
+          <p>Description: Time in milliseconds</p>
+          <p class="info">
+            This filter will return the contests whose duration is LESS THAN
+            EQUAL to the specified time
+          </p>
+        </div>
+        <div class="card Border" data-aos="fade-right">
+          <h1>pagenumber</h1>
+          <p>Datatype: Number</p>
+          <p class="info">
+            This is for Server Side Pagination. This will filter the data and
+            only provide documents which will be displayed on the specified
+            page.
+          </p>
+        </div>
+        <div class="card Border" data-aos="fade-left">
+          <h1>itemsperpage</h1>
+          <p>Datatype: Number</p>
+          <p class="info">
+            This is for Server Side Pagination. This will specify how many
+            documents to display on a page.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="midblocks">
+      <section id="tryit" class="midblock one">
+        <h1 class="tryithead">Try It!</h1>
+        <form class="tryitform">
+          <div class="form-group">
+            <label for="platforms">Enter platform codes separated by ','</label>
+            <input
+              type="text"
+              class="form-control"
+              id="platforms"
+              placeholder="Enter platform codes"
+            />
+          </div>
+          <div class="form-pair-fields">
+            <div class="form-group">
+              <label for="start_gte">start_gte</label>
+              <input
+                type="datetime-local"
+                class="form-control"
+                id="start_gte"
+                placeholder="Starting time >= "
+              />
+            </div>
+            <div class="form-group">
+              <label for="start_lte">start_lte</label>
+              <input
+                type="datetime-local"
+                class="form-control"
+                id="start_lte"
+                placeholder="Starting time <= "
+              />
+            </div>
+          </div>
+          <div class="form-pair-fields">
+            <div class="form-group">
+              <label for="end_gte">end_gte</label>
+              <input
+                type="datetime-local"
+                class="form-control"
+                id="end_gte"
+                placeholder="Ending time >= "
+              />
+            </div>
+            <div class="form-group">
+              <label for="end_lte">end_lte</label>
+              <input
+                type="datetime-local"
+                class="form-control"
+                id="end_lte"
+                placeholder="Ending time <= "
+              />
+            </div>
+          </div>
+          <div class="form-pair-fields">
+            <div class="form-group">
+              <label for="duration_gte">duration_gte</label>
+              <input
+                type="number"
+                class="form-control"
+                id="duration_gte"
+                placeholder="Duration >= "
+              />
+            </div>
+            <div class="form-group">
+              <label for="duration_lte">duration_lte</label>
+              <input
+                type="number"
+                class="form-control"
+                id="duration_lte"
+                placeholder="Duration <= "
+              />
+            </div>
+          </div>
+          <div class="form-pair-fields">
+            <div class="form-group">
+              <label for="pagenumber">pagenumber</label>
+              <input
+                type="number"
+                class="form-control"
+                id="pagenumber"
+                placeholder="Page Number in pagination "
+              />
+            </div>
+            <div class="form-group">
+              <label for="itemsperpage">itemsperpage</label>
+              <input
+                type="number"
+                class="form-control"
+                id="itemsperpage"
+                placeholder="Items per page"
+              />
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        <p id="urlpara">Url will appear here</p>
+      </section>
+      <section id="moreinfo" class="Block two">
+        <h1 class="moreinfohead">More Info</h1>
+        <ul class="list">
+          <li>
+            There is no limit parameter in the API. You can simulate limit
+            parameter by passing pagenumber as 1 as itemsperpage as limit.
+          </li>
+          <li>
+            The Database is updated everyday at 1AM. Request will be returned
+            with Server error from 00:58 AM till the time database is updated to
+            prevent any deadlocks. This usually takes a few seconds.
+          </li>
+          <li>
+            The data for this API is taken from clist.by. UC-API is much better
+            alternative to clist.by as
+            <ul class="sublist">
+              <li>clist.by data structure is complex.</li>
+              <li>faster that clist.by</li>
+              <li>
+                clist.by has a throttle of only 10 requests per minute! Which
+                makes it non-scalable!
+              </li>
+            </ul>
+          </li>
+          <li>
+            My Projects where I used UC-API
+            <ul class="sublist">
+              <li>
+                <a href="https://kodekin.netlify.app/" target="_blank"
+                  >KodeKin</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://codeforces-comparator.netlify.app/signin"
+                  target="_blank"
+                  >Codeforces Comparator</a
+                >
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+      <section id="aboutme" class="Block three">
+        <div>
+          <h1 class="aboutmehead">Hi There!</h1>
+          <h2>I am Rupesh Kumar, student at NSUT, Delhi</h2>
+          <h5>Checkout my Profiles and let me know if this helped you!!</h5>
+        </div>
+
+        <div class="container skillcontainer">
+          <div class="row justify-content-around align-items-center">
+            <div class="col-4 row skillsubsection">
+              <div class="col-sm-4 col-xs-6 skill">
+                <img src="./images/css.png" /> HTML
+              </div>
+              <div class="col-sm-4 col-xs-6 skill">
+                <img src="./images/html.png" />CSS
+              </div>
+              <div class="col-sm-4 col-xs-6 skill">
+                <img src="./images/js.png" />Javscript
+              </div>
+              <div class="col-sm-4 col-xs-6 skill">
+                <img src="./images/c.png" />C
+              </div>
+              <div class="col-sm-4 col-xs-6 skill">
+                <img src="./images/c++.png" />C++
+              </div>
+              <div class="col-sm-4 col-xs-6 skill">
+                <img src="./images/python.png" />Python
+              </div>
+            </div>
+            <div class="col-4">
+              <img
+                class="profilepic"
+                src="https://media-exp1.licdn.com/dms/image/C4E03AQGK1QZrBWkbjg/profile-displayphoto-shrink_800_800/0/1616141260327?e=1630540800&v=beta&t=ziy_Go3RT2dS4CB6kkFoG-Jh7pEs5nxLDflHbo8ulac"
+              />
+            </div>
+            <div class="col-4 row">
+              <div class="col-sm-4 col-xs-6 skill">
+                <img src="./images/react.png" />ReactJS
+              </div>
+              <div class="col-sm-4 col-xs-6 skill">
+                <img src="./images/jquery.png" />jquery
+              </div>
+              <div class="col-sm-4 col-xs-6 skill">
+                <img src="./images/nodejs.png" />NodeJS
+              </div>
+              <div class="col-sm-4 col-xs-6 skill">
+                <img src="./images/bootstrap.png" />Bootstrap
+              </div>
+              <div class="col-sm-4 col-xs-6 skill">
+                <img src="./images/mui.png" />Material-UI
+              </div>
+              <div class="col-sm-4 col-xs-6 skill">
+                <img src="./images/redux2.jpg" />Redux
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container profiles">
+          <div class="row justify-content-around">
+            <div class="col-lg-2 col-4">
+              <button class="btn">
+                <a href="https://www.linkedin.com/in/rupesh-kumar-a23597175/"
+                  ><img src="./images/linkedin.png"
+                /></a>
+              </button>
+            </div>
+            <div class="col-lg-2 col-4">
+              <button class="btn">
+                <a href="https://github.com/rkas123"
+                  ><img src="./images/github.png"
+                /></a>
+              </button>
+            </div>
+            <div class="col-lg-2 col-4">
+              <button class="btn">
+                <a href="https://codeforces.com/profile/daft_punk"
+                  ><img src="./images/cf.png"
+                /></a>
+              </button>
+            </div>
+            <div class="col-lg-2 col-4">
+              <button class="btn">
+                <a href="https://www.codechef.com/users/daft_punk123"
+                  ><img src="./images/codechef.jpg"
+                /></a>
+              </button>
+            </div>
+            <div class="col-lg-2 col-4">
+              <button class="btn">
+                <a href="https://leetcode.com/rkas/"
+                  ><img src="./images/leetcode.png"
+                /></a>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script src="./index.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <script>
+      AOS.init({
+        offset: 400,
+        duration: 1000,
+      });
+    </script>
+  </body>
+</html>
